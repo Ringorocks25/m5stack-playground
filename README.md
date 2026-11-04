@@ -1,6 +1,6 @@
 # StackChan ranger face
 
-Custom firmware for the official **M5Stack StackChan (CoreS3)** that puts the red helmet on the screen, blinks the green visor eyes, and chatters the mouth.
+Custom firmware for the official **M5Stack StackChan (CoreS3)** that puts the red helmet on the screen, blinks, chatters the mouth, and speaks in **Andrew**’s voice.
 
 Tap the screen or type a line over serial to talk. At home it calls **Ollama** on your PC (`llama3.2:3b` by default). At work, or if Ollama is unreachable, it uses short offline ranger lines so the face still talks.
 
@@ -15,7 +15,13 @@ pip install edge-tts
 cd voice-preview && npm install && npm run dev
 ```
 
-Open the voice lab, click **Play** on each card, then **Use this** on the one you want. Start with **Guy**, **Christopher**, **Roger**, or **Ryan**. This is not a licensed character voice.
+The saved voice is **Andrew** (`en-US-AndrewMultilingualNeural`). Boot and offline lines are already his voice, baked into the firmware. For live Ollama replies, run a TTS helper on the PC:
+
+```bash
+python3 tools/tts_server.py
+```
+
+Set `TTS_HOST` in `src/config.local.h` to that PC’s IP, then flash again.
 
 ## What you need
 

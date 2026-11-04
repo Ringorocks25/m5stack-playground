@@ -49,12 +49,12 @@ export const VOICES: VoiceInfo[] = [
     blurb: "Crisp and a bit nasal. Cuts through speaker noise.",
   },
   {
-    id: "en-US-AndrewNeural",
+    id: "en-US-AndrewMultilingualNeural",
     name: "Andrew",
     locale: "en-US",
     gender: "Male",
     featured: true,
-    blurb: "Conversational American. Less cartoon, more desk buddy.",
+    blurb: "Your pick. Warm conversational American. This is the helmet voice.",
   },
   {
     id: "en-US-BrianNeural",
@@ -315,11 +315,11 @@ export const VOICES: VoiceInfo[] = [
     blurb: "Hong Kong English female.",
   },
   {
-    id: "en-US-AndrewMultilingualNeural",
-    name: "Andrew (multi)",
+    id: "en-US-AndrewNeural",
+    name: "Andrew (Neural)",
     locale: "en-US",
     gender: "Male",
-    blurb: "Multilingual Andrew. Same speaker, broader language support.",
+    blurb: "Same speaker as Andrew. The TTS service often blocks this ID; the helmet uses multilingual.",
   },
   {
     id: "en-US-BrianMultilingualNeural",

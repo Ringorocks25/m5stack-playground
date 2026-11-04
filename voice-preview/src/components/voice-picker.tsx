@@ -20,7 +20,7 @@ export function VoicePicker() {
   const [text, setText] = useState(SAMPLE_LINES[0]);
   const [rate, setRate] = useState(0);
   const [pitch, setPitch] = useState(0);
-  const [selected, setSelected] = useState("en-US-GuyNeural");
+  const [selected, setSelected] = useState("en-US-AndrewMultilingualNeural");
   const [playing, setPlaying] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);

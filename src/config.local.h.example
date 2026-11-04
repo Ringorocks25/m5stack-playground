@@ -1,0 +1,17 @@
+#pragma once
+
+#define WIFI_SSID "your-wifi"
+#define WIFI_PASS "your-wifi-password"
+
+// IPv4 of the home PC that runs Ollama (same LAN, or Tailscale).
+#define OLLAMA_HOST "192.168.1.50"
+#define OLLAMA_PORT 11434
+
+// #define OLLAMA_MODEL "llama3.2:3b"
+// #define OLLAMA_MODEL "qwen2.5:3b"
+// #define OLLAMA_MODEL "gemma2:2b"
+// #define OLLAMA_MODEL "phi3:mini"
+
+#define TTS_VOICE "en-US-AndrewMultilingualNeural"
+#define TTS_HOST "192.168.1.50"
+#define TTS_PORT 43146
