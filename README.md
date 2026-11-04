@@ -1,5 +1,7 @@
 # StackChan ranger face
 
+**Local handoff:** read [`HANDOFF.md`](HANDOFF.md) first (GitHub clone, flash, Leroy, voice, what is not built).
+
 Custom firmware for the official **M5Stack StackChan (CoreS3)**. The character is **Leroy**. He blinks, chatters the mouth, and speaks in Andrew’s voice. Boot line: **“Leroy online.”**
 
 Tap the screen or type a line over serial to talk. At home it calls **Ollama** on your PC (`llama3.2:3b` by default). At work, or if Ollama is unreachable, it uses short offline Leroy lines.
