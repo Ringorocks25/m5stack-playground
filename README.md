@@ -1,8 +1,8 @@
 # StackChan ranger face
 
-Custom firmware for the official **M5Stack StackChan (CoreS3)** that puts the red helmet on the screen, blinks, chatters the mouth, and speaks in **Andrew**’s voice.
+Custom firmware for the official **M5Stack StackChan (CoreS3)**. The character is **Leroy**. He blinks, chatters the mouth, and speaks in Andrew’s voice. Boot line: **“Leroy online.”**
 
-Tap the screen or type a line over serial to talk. At home it calls **Ollama** on your PC (`llama3.2:3b` by default). At work, or if Ollama is unreachable, it uses short offline ranger lines so the face still talks.
+Tap the screen or type a line over serial to talk. At home it calls **Ollama** on your PC (`llama3.2:3b` by default). At work, or if Ollama is unreachable, it uses short offline Leroy lines.
 
 The JPEG is compiled into the firmware. You do not need a microSD card.
 
@@ -15,7 +15,7 @@ pip install edge-tts
 cd voice-preview && npm install && npm run dev
 ```
 
-The saved voice is **Andrew** (`en-US-AndrewMultilingualNeural`). Boot and offline lines are already his voice, baked into the firmware. For live Ollama replies, run a TTS helper on the PC:
+The voice is **Andrew** (`en-US-AndrewMultilingualNeural`) speaking as **Leroy**. Boot and offline lines are baked into the firmware. For live Ollama replies, run a TTS helper on the PC:
 
 ```bash
 python3 tools/tts_server.py
@@ -74,7 +74,7 @@ Copy `src/config.local.h.example` to `src/config.local.h` and set Wi-Fi plus the
 
 `config.local.h` is gitignored. Flash, then:
 
-- **Tap** the screen for a ranger greeting
+- **Tap** the screen for a Leroy greeting
 - **Serial monitor** (115200): type a sentence and press Enter
 
 If Wi-Fi or Ollama fails, the helmet still answers with built-in lines. There is no on-device speech-to-text yet; serial is the keyboard.

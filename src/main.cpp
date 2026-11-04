@@ -25,9 +25,9 @@ static constexpr int kMouthCoverRy = 24;
 static constexpr int kFaceRotation = 1;
 
 static const char* kOfflineLines[] = {
-    "Helmet online. Brain is on the home PC.",
+    "Leroy online. Brain is on the home PC.",
     "Tap me again when Ollama is in range.",
-    "Red ranger, standing by.",
+    "Leroy, standing by.",
     "Say something over serial and I will answer.",
 };
 static constexpr int kOfflineLineCount =
@@ -118,7 +118,7 @@ static void chatterOnce() {
 }
 
 static const uint8_t* clipFor(const String& text, size_t* len) {
-  if (text == "Helmet online. Andrew standing by.") {
+  if (text == "Leroy online.") {
     *len = boot_wav_len;
     return boot_wav;
   }
@@ -226,12 +226,12 @@ void setup() {
   if (wifiReady()) {
     caption = String("Ollama ") + OLLAMA_MODEL;
   } else {
-    caption = "Offline ranger. Tap or type.";
+    caption = "Leroy offline. Tap or type.";
   }
   redraw();
 
   Serial.println("Tap the screen or type a line over serial.");
-  speakText("Helmet online. Andrew standing by.");
+  speakText("Leroy online.");
 }
 
 void loop() {
@@ -249,7 +249,7 @@ void loop() {
   const auto touch = M5.Touch.getDetail();
   if (touch.wasClicked() && !busyTalking) {
     handleUtterance(
-        "A human tapped your helmet. Greet them as a red ranger.");
+        "A human tapped you. Greet them as Leroy in one short sentence.");
   }
 
   if (busyTalking) {
