@@ -3,3 +3,7 @@
 .DS_Store
 __pycache__/
 *.pyc
+src/config.local.h
+voice-preview/node_modules
+voice-preview/.next
+voice-preview/out
