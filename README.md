@@ -6,6 +6,28 @@ Tap the screen or type a line over serial to talk. At home it calls **Ollama** o
 
 The JPEG is compiled into the firmware. You do not need a microSD card.
 
+## Run this on your PC (not in the cloud)
+
+This cloud agent cannot see the USB cable. Flash and future firmware work belong on the machine the StackChan is plugged into.
+
+1. Click **Create repo** on this project if you have not already, then clone that repo onto this PC.
+2. Install [Cursor](https://cursor.com) **Desktop** and **Open Folder** on that clone. Use a normal local Agent chat — not Cloud / Background Agent — so it can use your serial port.
+3. Install tools:
+
+```bash
+pip install platformio pillow edge-tts
+# or: the PlatformIO IDE extension in Cursor
+```
+
+4. Plug the USB-C into the **base**. Hold **RST ~2 seconds** (green LED) if the port does not appear.
+5. From the repo root:
+
+```bash
+pio run -e m5stack-cores3 -t upload
+```
+
+Ask the **local** agent to flash, change firmware, or talk to the board. Keep this cloud thread for planning only.
+
 ## Pick a voice (hear it first)
 
 The helmet cannot run a neural voice on-chip. Preview voices in the browser, then we can play that same voice from your PC later.
