@@ -1,6 +1,6 @@
 # StackChan ranger face
 
-Custom firmware for the official **M5Stack StackChan (CoreS3)** that puts the red helmet on the screen and blinks the green visor eyes.
+Custom firmware for the official **M5Stack StackChan (CoreS3)** that puts the red helmet on the screen, blinks the green visor eyes, and chatters the mouth.
 
 The JPEG is compiled into the firmware. You do not need a microSD card.
 
@@ -44,5 +44,5 @@ Use [M5Burner](https://docs.m5stack.com/en/download), search **StackChan**, enab
 ## Notes
 
 - Screen is **320×240**. The helmet is letterboxed so it is not stretched.
-- Blink is a black oval over each visor eye, not a second photo.
+- Blink is a black oval over each visor eye. Mouth motion covers the photo mouth with helmet red, then draws a smaller or larger opening. Neither uses a second photo.
 - This sketch only drives the display. Head servos and RGB stay at hardware defaults.
