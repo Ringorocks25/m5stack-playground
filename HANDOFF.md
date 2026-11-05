@@ -2,6 +2,25 @@
 
 Use this file as the start of **local** work. Open the GitHub clone in Cursor Desktop and talk to a **local** Agent (not Cloud). The M5 is plugged into that PC; the cloud agent cannot see USB.
 
+## At home tonight
+
+Same Wi-Fi as this PC. Robot talks to Ollama + Andrew TTS on the PC.
+
+```bat
+cd C:\Users\Owner\Documents\m5stack-playground
+git pull
+powershell -ExecutionPolicy Bypass -File tools\setup-home.ps1
+```
+
+1. Edit `src\config.local.h`: `WIFI_SSID`, `WIFI_PASS`, and this PC’s IPv4 for both `OLLAMA_HOST` and `TTS_HOST`.
+2. Install [Ollama](https://ollama.com/download) if needed, then `ollama pull llama3.2:3b`.
+3. `setx OLLAMA_HOST 0.0.0.0` then quit/restart Ollama in the tray.
+4. Plug USB-C into the **base**. `python -m platformio run -e m5stack-cores3 -t upload`
+5. Keep `python tools\tts_server.py` running (or `tools\start-home-services.ps1`).
+6. Unplug USB if you want, power the robot on Wi-Fi, tap the face. First boot still says **“Leroy online.”**
+
+Windows Firewall: allow inbound TCP **11434** (Ollama) and **43146** (TTS) on a private network.
+
 ## Repo
 
 - GitHub: https://github.com/Ringorocks25/m5stack-playground
