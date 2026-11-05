@@ -7,7 +7,7 @@ Use this file as the start of **local** work. Open the GitHub clone in Cursor De
 Same Wi-Fi as this PC. Robot talks to Ollama + Andrew TTS on the PC.
 
 ```bat
-cd C:\Users\Owner\Documents\m5stack-playground
+cd C:\Users\Administrator\Documents\leroy-stackchan
 git pull
 powershell -ExecutionPolicy Bypass -File tools\setup-home.ps1
 ```
@@ -25,7 +25,7 @@ Windows Firewall: allow inbound TCP **11434** (Ollama) and **43146** (TTS) on a 
 
 - GitHub: https://github.com/Ringorocks25/m5stack-playground
 - Branch: `main`
-- Clone path on the last machine: `C:\Users\Owner\Documents\m5stack-playground`
+- Clone path on the home PC: `C:\Users\Administrator\Documents\leroy-stackchan`
 
 ```bat
 git clone https://github.com/Ringorocks25/m5stack-playground.git
@@ -80,7 +80,7 @@ Factory firmware restore: [M5Burner](https://docs.m5stack.com/en/download) → s
 Python from **python.org**, with **Add python.exe to PATH**. Do not use the Microsoft Store stub.
 
 ```bat
-cd C:\Users\Owner\Documents\m5stack-playground
+cd C:\Users\Administrator\Documents\leroy-stackchan
 python -m pip install -U platformio
 python -m platformio run -e m5stack-cores3 -t upload
 python -m platformio device monitor
